@@ -2,7 +2,7 @@
 import axios from 'axios';
 import {useState} from 'react';
 import './App.css';
-import Person from './Person';
+import Person from './components/person';
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
 
 async function handleSubmit(e) {
   e.preventDefault();
-  const url = `http://localhost:3001/person`;
+  const url = `${process.env.REACT_APP_LINK}/person`;
   const obj = {age : e.target.a.value};
   let response = await axios.post(url,obj);
   console.log(response.data);

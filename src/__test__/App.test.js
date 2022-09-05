@@ -1,16 +1,23 @@
 import React from "react";
-import {render, waitFor, screen} from '@testing-library/react';
+import { render, fireEvent, waitFor, screen } from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect';
 import App from '../App';
+import { wait } from "@testing-library/user-event/dist/utils";
 
-test('Display starter data', async () => {
-    render(<App/>);
-    const form = await waitFor(()=> screen.findByTestId('form'));
-    expect(form).toBeVisible();
-});
+test('Testing the text', async ()=>{
 
-test('Check the header',  () => {
     render(<App/>);
-     const heading =  screen.getByRole('heading');
-    expect(heading).toHaveTextContent(/This is our first App in 401/);
+    const name = await screen.findByTestId('name');
+    expect(name).toHaveTextContent('Your Name');
+
+})
+
+
+
+test('Testing the name changing', async () => {
+
+    render(<App />);
+    const age = await screen.findByTestId('age');
+    expect(age).toHaveTextContent('Your age after 5 years');
+
 })
