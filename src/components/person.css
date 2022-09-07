@@ -1,0 +1,31 @@
+div{
+    background-color: aqua;
+}
+.h1style{
+    text-align: center;
+    
+}
+
+.h2style{
+    text-align: center;
+    
+}
+
+.h4style{
+    text-align: center;
+    
+}
+.formstyle{
+    text-align: center;
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+.submitstyle{
+    background-color:yellow ;
+}
